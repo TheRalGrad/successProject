@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "885488839393",
+    "project_id": "projectend-ral069",
+    "storage_bucket": "projectend-ral069.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885488839393:android:66557bd5c74a3c3fe865a0",
+        "android_client_info": {
+          "package_name": "com.example.telekonsul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885488839393-ibsuk1ad0ras6klnh8lcmv0ga7sl5c3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.telekonsul",
+            "certificate_hash": "a44a87567a63cff2b826dedb637721cbaa01300c"
+          }
+        },
+        {
+          "client_id": "885488839393-vk884khffkmcag2sg6j2mk9u8qcp2cpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYjDRlnsu9nedOt-fxvyP6Dl4vVKjwkSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885488839393-vk884khffkmcag2sg6j2mk9u8qcp2cpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
