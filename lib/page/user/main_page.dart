@@ -7,6 +7,25 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  ///// Get data เพื่อ Show ในหน้าที อ. บอก
+  final user = FirebaseAuth.instance.currentUser!;
+
+  // document ID
+  List<String> docIDs = [];
+
+  // get docID
+  Future getDocId() async {
+    await FirebaseFirestore.instance.collection('admin').get().then(
+          (snapshot) => snapshot.docs.forEach(
+            (document) {
+              print(document.reference);
+              docIDs.add(document.reference.id);
+            },
+          ),
+        );
+  }
+  ////////////////
+
   late Size size;
   double height = 0;
   double width = 0;
@@ -15,6 +34,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   void initState() {
+    getDocId();
     Future.microtask(() {
       setState(() {
         currentUser = context.read<UserProvider>().user!;
@@ -29,7 +49,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.purple[100],
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: SafeArea(
@@ -76,7 +96,7 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: const [
                     Text(
-                      "Work report Today",
+                      "Work Post",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
                       textAlign: TextAlign.start,
@@ -101,12 +121,13 @@ class _MainPageState extends State<MainPage> {
                         child: Text("no work today"),
                       );
                     }
-
+// หน้าแสดงผลที่ อ. ให้แก้
                     return SizedBox(
                       height: 150,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: true,
+                        ////////////////////////////////////////
                         itemCount: value.listDoctor.length,
                         itemBuilder: (context, index) {
                           final item = value.listDoctor[index];
@@ -117,6 +138,7 @@ class _MainPageState extends State<MainPage> {
                               .first;
 
                           return _adminCard(item, itemKonsultasi, context);
+                          ////////////////////////////////////////
                         },
                       ),
                     );

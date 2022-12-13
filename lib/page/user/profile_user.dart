@@ -67,7 +67,7 @@ class _ProfileUserState extends State<ProfileUser> {
                               }
                             },
                             icon: const Icon(
-                              Icons.camera_alt,
+                              Icons.camera,
                               color: Colors.white,
                             ),
                           )),
@@ -170,7 +170,7 @@ class _ProfileUserState extends State<ProfileUser> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text("Take Picture From"),
+          title: const Text("Please upload your picture"),
           content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -180,7 +180,7 @@ class _ProfileUserState extends State<ProfileUser> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                  icon: const Icon(Icons.photo_camera, color: Colors.white),
+                  icon: const Icon(Icons.camera, color: Colors.white),
                   onPressed: () =>
                       Navigator.of(context).pop(ImageSource.camera),
                 ),
@@ -191,7 +191,8 @@ class _ProfileUserState extends State<ProfileUser> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                  icon: const Icon(Icons.photo, color: Colors.white),
+                  icon: const Icon(Icons.add_to_photos_rounded,
+                      color: Colors.white),
                   onPressed: () =>
                       Navigator.of(context).pop(ImageSource.gallery),
                 ),

@@ -34,7 +34,7 @@ class _DoctorTransactionDetailState extends State<DoctorTransactionDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.purple[100],
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -29,6 +29,7 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: SafeArea(
@@ -48,7 +49,7 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
                     const SizedBox(width: 24),
                     CircleAvatar(
                       radius: 16,
-                      backgroundColor: Colors.grey,
+                      backgroundColor: Colors.pink,
                       backgroundImage: currentUser?.profileUrl != "" &&
                               currentUser?.profileUrl != null
                           ? NetworkImage(currentUser?.profileUrl ??
@@ -176,7 +177,7 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
                     },
                     leading: const CircleAvatar(
                       backgroundColor: AppTheme.primaryColor,
-                      child: Icon(Icons.add, color: Colors.white),
+                      child: Icon(Icons.add_task_rounded, color: Colors.white),
                     ),
                     title: const Text("Add work schedule"),
                   ),
@@ -194,7 +195,7 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
                     },
                     leading: const CircleAvatar(
                       backgroundColor: AppTheme.darkerPrimaryColor,
-                      child: Icon(Icons.date_range, color: Colors.white),
+                      child: Icon(Icons.list_alt_outlined, color: Colors.white),
                     ),
                     title: const Text("work schedule list"),
                   ),
@@ -211,7 +212,8 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
                     },
                     leading: const CircleAvatar(
                       backgroundColor: AppTheme.primaryColor,
-                      child: Icon(Icons.assignment_ind, color: Colors.white),
+                      child: Icon(Icons.emoji_people_outlined,
+                          color: Colors.white),
                     ),
                     title: const Text("Subordinates list"),
                   ),
@@ -227,7 +229,8 @@ class _MainPageDoctorState extends State<MainPageDoctor> {
                     },
                     leading: const CircleAvatar(
                       backgroundColor: AppTheme.darkerPrimaryColor,
-                      child: Icon(Icons.assignment, color: Colors.white),
+                      child:
+                          Icon(Icons.query_builder_sharp, color: Colors.white),
                     ),
                     title: const Text("Queue list"),
                   ),

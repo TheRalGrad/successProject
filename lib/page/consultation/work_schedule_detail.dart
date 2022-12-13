@@ -243,6 +243,7 @@ class _ConsultationScheduleDetailState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -426,8 +427,7 @@ class _ConsultationScheduleDetailState
                                                     });
                                                   },
                                                   child: const Text("Update"),
-                                                  color: AppTheme
-                                                      .lighterSecondaryColor,
+                                                  color: Colors.blue[200],
                                                   textColor: Colors.black,
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:

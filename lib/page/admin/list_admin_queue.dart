@@ -20,6 +20,7 @@ class _ListDoctorQueueState extends State<ListDoctorQueue> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: Consumer<QueueProvider>(
         builder: (context, value, child) {
           if (value.isLoading) {

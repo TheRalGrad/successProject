@@ -21,7 +21,7 @@ class _TransactionDetailState extends State<TransactionDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.purple[100],
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
@@ -35,7 +35,7 @@ class _TransactionDetailState extends State<TransactionDetail> {
                     Expanded(
                       flex: 2,
                       child: Text(
-                        "Review ID #${transaction.docId}",
+                        "Task ID #${transaction.docId}",
                         style: const TextStyle(
                             fontSize: 14, fontWeight: FontWeight.w800),
                       ),
@@ -56,6 +56,7 @@ class _TransactionDetailState extends State<TransactionDetail> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
+                  color: Colors.green[100],
                   elevation: 4,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -73,7 +74,7 @@ class _TransactionDetailState extends State<TransactionDetail> {
                         const SizedBox(
                           height: 5,
                         ),
-                        buildText("Ral Grad",
+                        buildText("Time",
                             "${transaction.consultationSchedule!.startAt!.format(context)} - ${transaction.consultationSchedule!.endAt!.format(context)}"),
                         const SizedBox(
                           height: 5,

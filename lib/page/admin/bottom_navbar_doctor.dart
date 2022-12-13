@@ -37,18 +37,19 @@ class _BottomNavigationBarDoctorState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: _buildScreens[_selectedIndex],
       bottomNavigationBar: SnakeNavigationBar.color(
         behaviour: SnakeBarBehaviour.floating,
         currentIndex: _selectedIndex,
         elevation: 4,
         padding: const EdgeInsets.all(12),
-        snakeViewColor: AppTheme.primaryColor,
-        selectedItemColor: Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+        snakeViewColor: Colors.blueAccent[100],
+        selectedItemColor: Colors.green[100],
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        snakeShape: SnakeShape.circle,
+        snakeShape: SnakeShape.rectangle,
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
         items: const [
@@ -61,7 +62,7 @@ class _BottomNavigationBarDoctorState extends State {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_accessibility_rounded),
+            icon: Icon(Icons.settings_applications_outlined),
             label: 'Settings',
           ),
         ],

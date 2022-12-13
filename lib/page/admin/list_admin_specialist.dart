@@ -43,6 +43,7 @@ class _ListDoctorSpecialistState extends State<ListDoctorSpecialist> {
         return true;
       },
       child: Scaffold(
+        backgroundColor: Colors.purple[100],
         body: Consumer<DoctorProvider>(
           builder: (context, value, child) {
             if (value.isLoadingSpecialist) {

@@ -53,10 +53,10 @@ class DoctorProvider with ChangeNotifier {
       ),
     );
 
-    // หลังจากกำหนดข้อมูลแล้ว, ต่อไป เราต้องได้รับ work schedule จาก ฤกทรื ทุกกลุ่มย่อย
+    // หลังจากกำหนดข้อมูลแล้ว, ต่อไป เราต้องได้รับ work schedule จาก Admin ทุกกลุ่มย่อย
     // ใช้ Future.forEach เพื่อทำให้ loop async
     await Future.forEach<DataDoctor>(_listDoctor, (element) async {
-      // Getting the consultation schedule data, with Doctor uid from element
+      // รับข้อมูล work schedule ,ด้วย Admin uid จาก element
       final dataJadwal = await FirebaseFirestore.instance
           .doc('admin/${element.admin.uid}')
           .collection('consultation_schedule')

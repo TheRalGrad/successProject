@@ -19,6 +19,7 @@ class _ListDiagnosisUserState extends State<ListDiagnosisUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: Consumer<DiagnosisProvider>(
         builder: (context, value, child) {
           if (value.isLoading) {

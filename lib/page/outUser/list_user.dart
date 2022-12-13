@@ -20,6 +20,7 @@ class _ListPasienState extends State<ListPasien> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: Consumer<PatientProvider>(
         builder: (context, value, child) {
           if (value.isLoading) {

@@ -24,6 +24,7 @@ class _ListTransactionUserState extends State<ListTransactionUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: SafeArea(
         child: Consumer<TransactionProvider>(
           builder: (context, value, child) {

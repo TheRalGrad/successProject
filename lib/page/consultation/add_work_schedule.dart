@@ -242,6 +242,7 @@ class _AddConsultationScheduleState extends State<AddConsultationSchedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: LayoutBuilder(
         builder: (context, constraint) {
           return SingleChildScrollView(
@@ -403,8 +404,7 @@ class _AddConsultationScheduleState extends State<AddConsultationSchedule> {
                                               });
                                             },
                                             child: const Text("Add Schedule"),
-                                            color:
-                                                AppTheme.lighterSecondaryColor,
+                                            color: Colors.blue[200],
                                             textColor: Colors.black,
                                             shape: RoundedRectangleBorder(
                                               borderRadius:

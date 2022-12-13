@@ -44,6 +44,7 @@ class _EditQueueState extends State<EditQueue> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(

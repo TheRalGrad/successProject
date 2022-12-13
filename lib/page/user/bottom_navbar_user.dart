@@ -35,24 +35,24 @@ class _BottomNavigationBarUserScreenState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.purple[100],
       body: _buildScreens[_selectedIndex],
       bottomNavigationBar: SnakeNavigationBar.color(
         behaviour: SnakeBarBehaviour.floating,
         currentIndex: _selectedIndex,
         elevation: 4,
         padding: const EdgeInsets.all(12),
-        snakeViewColor: AppTheme.primaryColor,
-        selectedItemColor: Colors.white,
+        snakeViewColor: Colors.blueAccent[100],
+        selectedItemColor: Colors.green[100],
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        snakeShape: SnakeShape.circle,
+        snakeShape: SnakeShape.rectangle,
         unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_rounded),
+            icon: Icon(Icons.rate_review_outlined),
             label: 'Review',
           ),
           BottomNavigationBarItem(

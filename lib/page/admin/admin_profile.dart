@@ -12,6 +12,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: Consumer<DoctorProvider>(
         builder: (BuildContext context, value, Widget? child) {
           return SingleChildScrollView(
@@ -127,10 +128,10 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       child: const Text(
                         "Edit Profile",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ),
-                      color: AppTheme.warningColor,
+                      color: Colors.blueAccent[100],
                       height: 40,
                       minWidth: 150,
                     ),
@@ -169,7 +170,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                           color: Colors.white,
                         ),
                       ),
-                      color: AppTheme.dangerColor,
+                      color: Colors.blueAccent[100],
                       height: 40,
                       minWidth: 150,
                     ),
@@ -188,7 +189,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: const Text("Take Picture From"),
+          title: const Text("Upload your picture"),
           content: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -198,7 +199,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                   shape: CircleBorder(),
                 ),
                 child: IconButton(
-                  icon: const Icon(Icons.photo_camera, color: Colors.white),
+                  icon: const Icon(Icons.camera, color: Colors.white),
                   onPressed: () =>
                       Navigator.of(context).pop(ImageSource.camera),
                 ),

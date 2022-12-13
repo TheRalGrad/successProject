@@ -29,6 +29,7 @@ class _ConsultationPageState extends State<ConsultationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

@@ -22,6 +22,7 @@ class _ListConsultationScheduleState extends State<ListConsultationSchedule> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       body: Consumer<ConsultationScheduleProvider>(
         builder: (context, value, child) {
           if (value.isLoading) {
@@ -97,7 +98,8 @@ class _ListConsultationScheduleState extends State<ListConsultationSchedule> {
                           },
                           leading: const Icon(Icons.schedule,
                               color: AppTheme.primaryColor),
-                          title: Text("${item.daySchedule!.day}"),
+                          title: Text(
+                              "${item.daySchedule!.day} / ${item.monthSchedule!.month}"),
                           isThreeLine: true,
                           subtitle: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
